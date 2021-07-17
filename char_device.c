@@ -1,7 +1,7 @@
-#include <kernel.h>
-#include <init.h>
-#include <module.h>
-#include<linux/fs.h>
+#include <linux/kernel.h>
+#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/fs.h>
 
 int driver_open (struct inode *pinode, struct file *pfile)
 {
