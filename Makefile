@@ -1,4 +1,4 @@
-obj-m :=insert_module.o
+obj-m :=inser_module.o
 obj-m +=char_driver.o
 obj-m +=jiffies.o
 
