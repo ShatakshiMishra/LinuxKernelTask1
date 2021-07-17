@@ -16,7 +16,7 @@ ssize_t driver_read (struct file *pfile, char __user *buff, size_t len, loff_t *
 ssize_t driver_write (struct file *pfile, const char __user *buff, size_t len, loff_t *offset)
 {
    printk(KERN_ALERT "WRITTEN");
-  retun len;
+  return len;
  
 }
 int driver_close (struct inode *pinode, struct file *pfile)
@@ -40,7 +40,7 @@ static int driver_init(void)
 }
 static void driver_exit(void)
 {
-        unregister_chrdev(200,"mydevice");
+        unregister_chrdev(200,"mydriver");
 
 }
 module_init(driver_init);
