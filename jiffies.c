@@ -5,7 +5,7 @@
 #include <linux/delay.h>
 #include <linux/jiffies.h>
 #include <linux/init.h>
-#define TOUT 10000
+#define TOUT 8000
 
 static struct task_struct *spare;
 static struct timer_list time_ex;
@@ -30,7 +30,7 @@ int do_func(void *p)
 
 static int jiffies_init(void)
 {
-	printk(KERN_ALERT "Jiffie : %lu\n", jiffies);
+	printk(KERN_ALERT "Jiffie : %s\n", jiffies);
 	spare = kthread_run(do_func, NULL, "Thread");
 	timer_setup(&time_ex, timer_callback, 0);
 	mod_timer(&time_ex, jiffies+ msecs_to_jiffies(TOUT));
