@@ -1,6 +1,6 @@
-#include <kernel.h>
-#include <init.h>
-#include <module.h>
+#include <linux/kernel.h>
+#include <linux/init.h>
+#include <linux/module.h>
 static int load_init(void)
 {
         printk(KERN_ALERT "LOAD");
