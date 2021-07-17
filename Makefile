@@ -1,5 +1,5 @@
 obj-m :=inser_module.o
-obj-m +=char_driver.o
+obj-m +=char_device.o
 obj-m +=jiffies.o
 
 all:
